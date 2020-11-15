@@ -20,7 +20,7 @@ public class Natrium : MonoBehaviour
     IEnumerator OnWater()
     {
         GetComponent<ParticleSystem>().Play();
-        while (transform.localScale.magnitude > 0.15f)
+        while (transform.localScale.magnitude > 0.013f)
         {
             if (rb.velocity.magnitude < maxMoveSpeed)
             {
