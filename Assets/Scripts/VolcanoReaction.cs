@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class VolcanoReaction : MonoBehaviour
 {
-    public const float LengthOfReaction = 10f;
+    [SerializeField]
+    private float lengthOfReaction = 10f;
     
     private bool _bakingSodaApplied;
     private bool _vinegarApplied;
@@ -25,7 +26,7 @@ public class VolcanoReaction : MonoBehaviour
         if (_bakingSodaApplied && _vinegarApplied)
         {
             _particleSystem.Play();
-            StartCoroutine(DisableParticleSystemAfter(LengthOfReaction));
+            StartCoroutine(DisableParticleSystemAfter(lengthOfReaction));
             _bakingSodaApplied = false;
             _vinegarApplied = false;
         }
